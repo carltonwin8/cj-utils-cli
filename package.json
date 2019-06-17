@@ -11,6 +11,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "cj-find-in-files": "0.0.2",
     "cj-photo-process": "0.0.5"
   }
 }

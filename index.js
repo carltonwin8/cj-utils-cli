@@ -3,13 +3,13 @@ const inquirer = require("inquirer");
 
 //const startGui = require("./start-gui");
 const photoProcess = require("cj-photo-process")({ inquirer, getCmd: true });
-//const findInFiles = require("./find-in-files");
+const findInFiles = require("cj-find-in-files")({ inquirer, getCmd: true });
 //const mountsHome = require("./mounts-home");
 
 const tools = [
-  { name: "Process Photos", cmd: photoProcess }
+  { name: "Process Photos", cmd: photoProcess },
+  { name: "Find in Files", cmd: findInFiles }
   //  { name: "Home Drive Mounts", cmd: mountsHome },
-  //  { name: "Find in Files", cmd: findInFiles },
   //  { name: "GUI", cmd: startGui }
 ];
 
@@ -25,5 +25,5 @@ const inq = inquirer
   .then(
     answers =>
       console.log("answers", answers, photoProcess) ||
-      tools.filter(tool => tool.name === answers.tool)[0].cmd({ inquirer })
+      tools.filter(tool => tool.name === answers.tool)[0].cmd()
   );
