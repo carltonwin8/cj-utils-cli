@@ -1,0 +1,16 @@
+{
+  "name": "cj-utils-cli",
+  "version": "1.0.0",
+  "description": "Carlton's top level utilities script file.",
+  "main": "index.js",
+  "bin": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cj-photo-process": "0.0.5"
+  }
+}
